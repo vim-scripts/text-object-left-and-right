@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3511
+
+This simple script create text object for left and right of a statement. e.g
+
+stri|ng = "Hello World"
+
+
+| is where your cursor is, in command mode
+type ciL (change inner and L for the right hand sided)
+
+the line will become
+
+string = |
+
+similarily
+
+ciH, diH, yiH etc will change, delete, yank the left hand side of the statement
+
+this also works for ==, => as well
+
