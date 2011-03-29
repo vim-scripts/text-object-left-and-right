@@ -18,3 +18,6 @@ ciH, diH, yiH etc will change, delete, yank the left hand side of the statement
 
 this also works for ==, => as well
 
+Note if the line end with ',' or ';' it will be the boundary of the right hand side
+If there is a space before the separator (=, ==, =>) or after, they are so the the boundary
+

@@ -40,7 +40,14 @@ function! SelectRight(inner_or_all)
   endif
 
   if a:inner_or_all == 'i'
-    call feedkeys(iStart.'|v$h')
+    let string_length = strlen(getline('.'))
+    let last_char = getline('.')[string_length - 1]
+
+    if last_char == ',' || last_char == ';'
+      call feedkeys(iStart.'|v'. (string_length - 1) . '|')
+    else
+      call feedkeys(iStart.'|v$h')
+    endif
   else
     call feedkeys(iStart.'|v$')
   endif
